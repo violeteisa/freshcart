@@ -105,7 +105,7 @@ export default function RecentProducts() {
 
   return (
     <>
-      <Helmet>
+        <Helmet>
         <title>Products</title> 
       </Helmet>
       <div className="mt-24">

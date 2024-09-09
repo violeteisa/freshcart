@@ -7,7 +7,7 @@ export default function WishlistContextProvider(props) {
   let headers = {
     token: localStorage.getItem("userToken"),
   };
-
+  const localToken = localStorage.getItem("userToken")
   const [Wishlist, setWishlist] = useState(null);
 
   function getLoggedUserWishlist() {
@@ -50,9 +50,8 @@ export default function WishlistContextProvider(props) {
   }
 
   useEffect(() => {
-    getWishlist();
-  
-  }, [])
+    localToken && getWishlist();
+  }, [localToken])
   
   return (
     <WishlistContext.Provider

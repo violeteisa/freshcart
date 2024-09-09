@@ -17,7 +17,7 @@ export default function Login() {
       .string()
       .matches(
         /^[A-Z][a-z][0-9]{5,10}$/,
-        "password must start with capital letter"
+        "Password must start with an uppercase letter, followed by a lowercase letter, and contain 5 to 10 digits."
       )
       .required("password is required"),
   });
